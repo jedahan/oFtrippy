@@ -2,25 +2,28 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    x = 0;
-    y = 0;
-    r = 10;
+    ofSetFrameRate(60);
+    lastX = 0;
+    lastY = 0;
+    index = 0;
     ofHideCursor();
-    ofSetBackgroundAuto(false);
-    ofSetFullscreen(true);
+    //ofSetFullscreen(true);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    r += ofRandom(7);
-    r -= ofRandom(5);
-    color = ofColor(ofRandom( 128, 255 ), ofRandom( 128, 255 ), ofRandom( 128, 255 ));
+    ofSetBackgroundAuto(false);
+    for(Tripper &tripper : trippers) {
+        tripper.update();
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    ofSetColor(color);
-    ofCircle(x, y, r);
+    for(Tripper &tripper : trippers) {
+        tripper.draw();
+    }
+
 }
 
 //--------------------------------------------------------------
@@ -35,8 +38,10 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-    testApp::x = x;
-    testApp::y = y;
+    Tripper t = Tripper(x,y,x-lastX,y-lastY,10,ofColor(255,255,255));
+    trippers.push_back(t);
+    lastX=x;
+    lastY=y;
 }
 
 //--------------------------------------------------------------

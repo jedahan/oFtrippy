@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Tripper.h"
 
 class testApp : public ofBaseApp{
 
@@ -19,8 +20,7 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		int x;
-		int y;
-        int r;
-        ofColor color;
+        vector<Tripper> trippers;
+        int index;
+        int lastX, lastY;
 };
