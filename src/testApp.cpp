@@ -7,12 +7,14 @@ void testApp::setup(){
     lastY = 0;
     index = 0;
     ofHideCursor();
-    //ofSetFullscreen(true);
+    ofSetFullscreen(true);
+    ofSetBackgroundAuto(false);    
+    ofSetVerticalSync(true);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    ofSetBackgroundAuto(false);
+
     for(Tripper &tripper : trippers) {
         tripper.update();
     }
@@ -38,7 +40,7 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-    Tripper t = Tripper(x,y,x-lastX,y-lastY,10,ofColor(255,255,255));
+    Tripper t = Tripper(x,y,10,x-lastX,y-lastY,ofColor(255,255,255));
     trippers.push_back(t);
     lastX=x;
     lastY=y;

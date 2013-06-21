@@ -21,12 +21,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/Tripper.cpp"
-         timestampString = "393467150.745412"
+         timestampString = "393480890.437069"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
-         landmarkName = "Tripper::Tripper()"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "Tripper::draw()"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -34,11 +34,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "393466163.508154"
+         timestampString = "393469957.23418"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38">
+         startingLineNumber = "40"
+         endingLineNumber = "40">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/Tripper.cpp"
+         timestampString = "393480575.882355"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "13"
+         endingLineNumber = "13"
+         landmarkName = "Tripper::update()"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
